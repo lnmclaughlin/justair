@@ -9,9 +9,18 @@ class Form extends React.Component {
 
   render() {
     const { formData } = this.props;
+  }
+
+  handleFormSubmit = (event) => {
+    //TODO
+    event.preventDefault();
+  };
+
+  handleButtonClick = () => {
+    buttonText("Thanks!");
 
     return (
-      <form>
+      <form onSubmit={this.handleFormSubmit}>
         <h2>Contact Us</h2>
         <label>
           First Name:
@@ -44,9 +53,16 @@ class Form extends React.Component {
           />
         </label>
         <textarea type="text" name="message" placeholder="message" required />
+        <button
+          type="submit"
+          className="formbtn"
+          onClick={this.handleButtonClick}
+        >
+          {" "}
+        </button>
       </form>
     );
-  }
+  };
 }
 
 const mapStateToProps = (state) => ({
