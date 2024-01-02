@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import formReducer from "../reducers/formReducer";
 
 class Form extends React.Component {
   handleChange = (e) => {
@@ -9,6 +10,9 @@ class Form extends React.Component {
 
   render() {
     const { formData } = this.props;
+    return {
+      formData,
+    };
   }
 
   handleFormSubmit = (event) => {
@@ -17,6 +21,8 @@ class Form extends React.Component {
   };
 
   handleButtonClick = () => {
+    const [buttonText, setButtonText] = React.useState("Submit");
+
     buttonText("Thanks!");
 
     return (

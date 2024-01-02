@@ -9,6 +9,7 @@ const initialState = {
     firstName: "",
     lastName: "",
     email: "",
+    message: "",
   },
 };
 
