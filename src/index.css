@@ -12,17 +12,18 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
-h2 {
-  text-align: center;
-  color: #218aff;
-  padding: 5px;
-}
 .form-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+  padding: 5px;
 }
 form {
   text-align: center;
@@ -59,10 +60,10 @@ textarea {
 }
 
 .formbtn {
-  background-color: #e4af60;
+  background-color: #fff;
   color: #fff;
   border: none;
-  /* width: 15%; */
+  width: 15%;
   font-size: medium;
   border-radius: 20px;
   margin: 10px;
@@ -76,6 +77,6 @@ textarea {
 }
 @media only screen and (max-width: 991px) {
   body {
-    background-color: pink;
+    background-color: rgb(225, 121, 76);
   }
 }
