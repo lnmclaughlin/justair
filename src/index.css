@@ -12,3 +12,70 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
+h2 {
+  text-align: center;
+  color: #218aff;
+  padding: 5px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+form {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  color: #fff;
+  background-color: #2596be;
+  padding: 40px 80px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  border: 1px solid silver;
+  margin: 5px;
+  padding: 5px;
+  background-color: #b4d1e0;
+}
+
+.message-container {
+  width: 500px; /* Adjust the width as needed */
+}
+textarea {
+  border: 1px solid silver;
+  width: 100%;
+  height: 250px; /* Adjust the height as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  padding: 10px;
+  resize: none;
+  background-color: #b4d1e0;
+  font-family: "Jost", sans-serif;
+}
+
+.formbtn {
+  background-color: #e4af60;
+  color: #fff;
+  border: none;
+  /* width: 15%; */
+  font-size: medium;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 479px) {
+  body {
+    background-color: green;
+  }
+}
+@media only screen and (max-width: 991px) {
+  body {
+    background-color: pink;
+  }
+}

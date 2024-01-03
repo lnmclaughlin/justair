@@ -1,10 +1,4 @@
-import { combineReducers } from "redux";
-
-export const rootReducer = combineReducers({
-  form: formReducer,
-});
-
-const initialState = {
+export const initialState = {
   formData: {
     firstName: "",
     lastName: "",
