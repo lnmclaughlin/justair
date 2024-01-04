@@ -18,19 +18,33 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  /* 
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  position: static; */
 }
 
 h2 {
   text-align: center;
   color: #fff;
+  /* color: #281ca5; */
   padding: 5px;
 }
 form {
-  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 5px;
   padding: 5px;
   color: #fff;
-  background-color: #2596be;
+  /* background-color: #2596be; */
   padding: 40px 80px;
 }
 
@@ -39,44 +53,57 @@ label {
 }
 
 input {
-  border: 1px solid silver;
-  margin: 5px;
-  padding: 5px;
-  background-color: #b4d1e0;
+  width: 100%;
+  height: 38px;
+  color: #333;
+  /* vertical-align: middle; */
+  background-color: #ffffff66;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.42857;
+  display: block;
 }
 
 .message-container {
-  width: 500px; /* Adjust the width as needed */
+  width: 450px; /* Adjust the width as needed */
 }
 textarea {
-  border: 1px solid silver;
+  /* border: 1px solid silver; */
+  /* display: block; */
+  /* vertical-align: middle; */
+
+  border: none;
   width: 100%;
-  height: 250px; /* Adjust the height as needed */
+  height: 350px; /* Adjust the height as needed */
   font-size: 16px; /* Adjust the font size as needed */
   padding: 10px;
   resize: none;
-  background-color: #b4d1e0;
-  font-family: "Jost", sans-serif;
+  background-color: #ffffff66;
+  font-family: "Poppins", sans-serif;
 }
 
 .formbtn {
-  background-color: #fff;
+  background-color: #e4af60;
   color: #fff;
+  text-align: center;
+  border-radius: 100px;
+  padding: 15px 30px;
+  font-size: 16px;
+  text-decoration: none;
   border: none;
-  width: 15%;
-  font-size: medium;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 20px;
+  transition: all 0.35s;
 }
 
-@media only screen and (min-width: 479px) {
+@media only screen and (min-width: 375px) {
   body {
     background-color: green;
   }
 }
 @media only screen and (max-width: 991px) {
   body {
-    background-color: rgb(225, 121, 76);
+    background-color: #2596be;
   }
 }

@@ -19,43 +19,41 @@ function Form() {
       <h2>Contact Us</h2>
       <form>
         <label>
-          First Name:
           <input
             type="text"
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
+            placeholder="First Name"
             required
           />
         </label>
         <label>
-          Last Name:
           <input
             type="text"
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
+            placeholder="Last Name"
             required
           />
         </label>
         <label>
-          Email:
           <input
             type="text"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Email"
             required
           />
         </label>
         <div className="message-container">
-          <textarea type="text" name="message" placeholder="message" required />
+          <textarea type="text" name="message" placeholder="Message" required />
         </div>
-        <button
-          type="submit"
-          className="formbtn"
-          onClick={handleFormSubmit}
-        ></button>
+        <button type="submit" className="formbtn" onClick={handleFormSubmit}>
+          Submit
+        </button>
       </form>
     </div>
   );
