@@ -1,7 +1,5 @@
-// src/redux/slices/formSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
-// Initial state
 const initialState = {
   firstName: "",
   lastName: "",
@@ -9,7 +7,6 @@ const initialState = {
   message: "",
 };
 
-// Create a slice
 const formSlice = createSlice({
   name: "form", // Slice name
   initialState,
@@ -22,6 +19,5 @@ const formSlice = createSlice({
   },
 });
 
-// Export the generated reducer and action creators
 export const { updateFormData } = formSlice.actions;
 export default formSlice.reducer;
