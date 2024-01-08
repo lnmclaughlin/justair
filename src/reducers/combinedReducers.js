@@ -5,6 +5,7 @@ import formReducer from "../slices/formSlice";
 const rootReducer = combineReducers({
   user: userReducer,
   form: formReducer,
+
   // Add more reducers as needed
 });
 

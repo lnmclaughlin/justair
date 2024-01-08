@@ -5,6 +5,10 @@ const initialState = {
   lastName: "",
   email: "",
   message: "",
+  isSubmitting: false,
+  isSuccess: false,
+  isError: false,
+  errorMessage: "",
 };
 
 const formSlice = createSlice({
@@ -15,9 +19,37 @@ const formSlice = createSlice({
       const { field, value } = action.payload;
       state[field] = value;
     },
+    submitForm: (state) => {
+      state.isSubmitting = true;
+      state.isSuccess = false;
+      state.isError = false;
+      state.errorMessage = "";
+    },
+    submitFormSuccess: (state) => {
+      state.isSubmitting = false;
+      state.isSuccess = true;
+      state.isError = false;
+      state.errorMessage = "";
+    },
+    submitFormError: (state, action) => {
+      state.isSubmitting = false;
+      state.isSuccess = false;
+      state.isError = true;
+      state.errorMessage = action.payload;
+    },
     // Add more reducer functions as needed
+
+    resetForm: (state) => {
+      // Reset the form state
+      return initialState;
+    },
   },
 });
-
-export const { updateFormData } = formSlice.actions;
+export const {
+  updateFormData,
+  submitForm,
+  submitFormSuccess,
+  submitFormError,
+  resetForm,
+} = formSlice.actions;
 export default formSlice.reducer;
