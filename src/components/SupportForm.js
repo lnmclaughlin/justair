@@ -42,7 +42,7 @@ const SupportForm = () => {
       <h2>Contact Us</h2>
       <form onSubmit={handleFormSubmit}>
         <div>
-          <label>
+          <label htmlFor="First Name">
             <input
               type="text"
               name="firstName"
@@ -50,10 +50,12 @@ const SupportForm = () => {
               onChange={handleChange}
               placeholder="First Name"
               maxlength="254"
+              autoComplete="true"
+              aria-describedby="First-Name"
               required
             />
           </label>
-          <label>
+          <label htmlFor="Last Name">
             <input
               type="text"
               name="lastName"
@@ -61,10 +63,12 @@ const SupportForm = () => {
               onChange={handleChange}
               placeholder="Last Name"
               maxlength="254"
+              autoComplete="true"
+              aria-describedby="Last Name"
               required
             />
           </label>
-          <label>
+          <label htmlFor="Email Address">
             <input
               type="text"
               name="email"
@@ -72,6 +76,8 @@ const SupportForm = () => {
               onChange={handleChange}
               placeholder="Email"
               maxlength="254"
+              autoComplete="true"
+              aria-describedby="Email Address"
               required
             />
           </label>
@@ -83,11 +89,15 @@ const SupportForm = () => {
             value={formData.message}
             placeholder="Message"
             maxlength="5000"
-            required
             onChange={handleChange}
+            autoComplete="true"
+            aria-describedby="Message"
+            required
           />
         </div>
         <button
+          htmlFor="Submit Button"
+          aria-describedby="Submit Button"
           className="formbtn"
           type="submit"
           disabled={formData.isSubmitting}
@@ -95,12 +105,18 @@ const SupportForm = () => {
           {formData.isSubmitting ? "Submitting..." : "Submit"}
         </button>
         {formData.isSuccess && (
-          <p style={{ color: "#ccc" }}>Support ticket created successfully!</p>
+          <p style={{ color: "#fff" }}>Support ticket created successfully!</p>
         )}
         {formData.isError && (
           <p style={{ color: "#df1b1b" }}>{formData.errorMessage}</p>
         )}
-        <button className="formbtn reset" type="button" onClick={handleReset}>
+        <button
+          className="formbtn reset"
+          htmlFor="Reset Button"
+          aria-describedby="Reset Button"
+          type="button"
+          onClick={handleReset}
+        >
           Reset Form
         </button>
       </form>

@@ -12,26 +12,7 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
-.welcome-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  background-color: #0abede;
-  font-family: "Poppins", sans-serif;
-  color: #ccc;
-}
-.logout {
-  background-color: #e4af60;
-  color: #fff;
-  text-align: center;
-  border-radius: 100px;
-  padding: 15px 30px;
-  font-size: 16px;
-  text-decoration: none;
-  border: none;
-  transition: all 0.35s;
-}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -113,11 +94,11 @@ p {
 }
 @media only screen and (min-width: 375px) {
   body {
-    background-color: #081d7a;
+    background-color: #2596be;
   }
 }
 @media only screen and (max-width: 991px) {
   body {
-    background-color: #2596be;
+    background-color: #22b573;
   }
 }
