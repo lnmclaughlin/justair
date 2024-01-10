@@ -41,47 +41,49 @@ const SupportForm = () => {
     <div className="form-container">
       <h2>Contact Us</h2>
       <form onSubmit={handleFormSubmit}>
-        <div>
-          <label htmlFor="First Name">
-            <input
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              placeholder="First Name"
-              maxlength="254"
-              autoComplete="true"
-              aria-describedby="First-Name"
-              required
-            />
-          </label>
-          <label htmlFor="Last Name">
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Last Name"
-              maxlength="254"
-              autoComplete="true"
-              aria-describedby="Last Name"
-              required
-            />
-          </label>
-          <label htmlFor="Email Address">
-            <input
-              type="text"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email"
-              maxlength="254"
-              autoComplete="true"
-              aria-describedby="Email Address"
-              required
-            />
-          </label>
-        </div>
+        <fieldset>
+          <div>
+            <label htmlFor="First Name Input">
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="First Name"
+                maxlength="254"
+                autoComplete="true"
+                aria-describedby="First-Name"
+                required
+              />
+            </label>
+            <label htmlFor="Last Name Input">
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Last Name"
+                maxlength="254"
+                autoComplete="true"
+                aria-describedby="Last Name"
+                required
+              />
+            </label>
+            <label htmlFor="Email Address Input">
+              <input
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                maxlength="254"
+                autoComplete="true"
+                aria-describedby="Email Address"
+                required
+              />
+            </label>
+          </div>
+        </fieldset>
         <div className="message-container">
           <textarea
             type="text"
@@ -104,16 +106,26 @@ const SupportForm = () => {
         >
           {formData.isSubmitting ? "Submitting..." : "Submit"}
         </button>
-        {formData.isSuccess && (
-          <p style={{ color: "#fff" }}>Support ticket created successfully!</p>
-        )}
-        {formData.isError && (
-          <p style={{ color: "#df1b1b" }}>{formData.errorMessage}</p>
-        )}
+        <div aria-live="polite">
+          {formData.isSuccess && (
+            <p id="form-submitted" style={{ color: "#fff" }}>
+              Support ticket created successfully!
+            </p>
+          )}
+          {formData.isError && (
+            <p
+              id="form-submission-error"
+              role="alert"
+              style={{ color: "#df1b1b" }}
+            >
+              {formData.errorMessage}
+            </p>
+          )}
+        </div>
         <button
-          className="formbtn reset"
           htmlFor="Reset Button"
           aria-describedby="Reset Button"
+          className="formbtn reset"
           type="button"
           onClick={handleReset}
         >
