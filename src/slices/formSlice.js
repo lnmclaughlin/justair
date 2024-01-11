@@ -12,7 +12,7 @@ const initialState = {
 };
 
 const formSlice = createSlice({
-  name: "form", // Slice name
+  name: "form",
   initialState,
   reducers: {
     updateFormData: (state, action) => {
@@ -37,10 +37,8 @@ const formSlice = createSlice({
       state.isError = true;
       state.errorMessage = action.payload;
     },
-    // Add more reducer functions as needed
 
     resetForm: (state) => {
-      // Reset the form state
       return initialState;
     },
   },

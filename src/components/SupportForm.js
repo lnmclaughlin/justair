@@ -16,10 +16,12 @@ const SupportForm = () => {
     const { name, value } = e.target;
     dispatch(updateFormData({ field: name, value }));
   };
+  console.log(formData);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     dispatch(submitForm());
+    console.log(submitForm);
 
     // API call to create actual support ticket goes here
     try {
@@ -50,7 +52,7 @@ const SupportForm = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 placeholder="First Name"
-                maxlength="254"
+                maxLength="254"
                 autoComplete="true"
                 aria-describedby="First-Name"
                 required
@@ -63,7 +65,7 @@ const SupportForm = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 placeholder="Last Name"
-                maxlength="254"
+                maxLength="254"
                 autoComplete="true"
                 aria-describedby="Last Name"
                 required
@@ -76,7 +78,7 @@ const SupportForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email"
-                maxlength="254"
+                maxLength="254"
                 autoComplete="true"
                 aria-describedby="Email Address"
                 required
@@ -90,7 +92,7 @@ const SupportForm = () => {
             name="message"
             value={formData.message}
             placeholder="Message"
-            maxlength="5000"
+            maxLength="5000"
             onChange={handleChange}
             autoComplete="true"
             aria-describedby="Message"
